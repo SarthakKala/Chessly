@@ -1,0 +1,44 @@
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.flipped {
+    transform: rotate(180deg);
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square.light {
+    background-color: #f0ebd8;
+}
+
+.square.dark {
+    background-color: #658c3b;
+}
+
+
+.piece {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: grab;
+    user-select: none;
+}
+
+.piece.draggable {
+    cursor: grab;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.flipped .piece {
+    transform: rotate(180deg);
+}
